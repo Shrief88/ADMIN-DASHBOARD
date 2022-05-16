@@ -1,0 +1,29 @@
+.container{
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   grid-template-rows: 1fr 3fr;
+   gap : 15px;
+   grid-template-areas: 
+   "sideBar header "
+   "sideBar content";
+}
+
+.header{
+   grid-area: header; 
+   background-color: black;
+
+}
+
+.sideBar{
+   grid-area: sideBar;
+   background-color: yellow;
+
+}
+
+.content{
+   grid-area: content;
+   background-color: blue;
+
+}
+
