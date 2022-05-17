@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
 
-p,html,body{
+p,html,body,h1{
    margin: 0;
    padding: 0;
 }
@@ -68,7 +68,35 @@ p,html,body{
 
 
 .lowerHeader{
- 
+   display: flex;
+   justify-content: space-between;
+   padding: 0px 60px 30px 60px;
+}
+
+.lowerHeader>div{
+   display: flex;
+   align-items: center;
+   gap: 40px;
+}
+
+.lowerHeader button{
+   padding: 10px 30px;
+   border-radius: 25px;
+   font-size: 1.2rem;
+   background-color: #1992D4;
+   color: white;
+   border: 1px solid #ffffff;
+
+
+}
+
+
+
+#profilePicture{
+   border-radius: 32.5px;
+   background: url(profilePicture.jpg) center center /cover no-repeat;
+   width: 75px;
+   height: 75px;
 }
 
 
