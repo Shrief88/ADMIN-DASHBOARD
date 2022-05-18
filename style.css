@@ -8,11 +8,21 @@ p,html,body,h1{
 *{
    font-family: 'Roboto', sans-serif;
    box-sizing: border-box;
+
+   --avatar1:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg);
+   --avatar2:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/8394f798931623.5ee79b6a909ea.jpg);
+   --avatar3:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
+   --avatar4:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa20698931623.5ee79b6a8ec2b.jpg);
+}
+
+.smallProfilePicture{
+   border-radius: 25px;
+   width: 50px;
+   height: 50px;
 }
 
 .container{
    background-color: #E2E8F0;
-   height: 100vh;
    display: grid;
    grid-template-columns: 0.7fr 3fr;
    grid-template-rows: 0.7fr 3fr;
@@ -28,7 +38,7 @@ p,html,body,h1{
    display: grid;
    grid-template-rows: 1fr 1fr;
    padding: 15px 60px;
-   gap: 20px;
+   gap: 15px;
 }
 
 .upperHeader,.lowerHeader{  
@@ -56,10 +66,7 @@ p,html,body,h1{
 }
 
 .upperHeader>div>div{
-   border-radius: 25px;
-   background: url(profilePicture.jpg) center center /cover no-repeat;
-   width: 50px;
-   height: 50px;
+   background: var(--avatar1)  center center /cover no-repeat;
 }
 
 .upperHeader>div>p{
@@ -80,7 +87,7 @@ p,html,body,h1{
 
 #profilePicture{
    border-radius: 32.5px;
-   background: url(profilePicture.jpg) center center /cover no-repeat;
+   background: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg) center center /cover no-repeat;
    width: 75px;
    height: 75px;
 }
@@ -134,15 +141,19 @@ p,html,body,h1{
 .sideContent{
    padding-top: 40px;
    padding-right: 40px;
+   padding-bottom: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
 }
 
-.sideContent>p{
+.UpperContent>p,.lowerContent>p{
    padding-bottom: 10px;
    font-size: 1.5rem;
    font-weight: 700;
 }
 
-.sideContent>div{
+.UpperContent>div , .lowerContent>div{
    background-color: white;
    padding: 30px ;
    border-radius: 20px;
@@ -151,22 +162,49 @@ p,html,body,h1{
    gap: 10px;
 }
 
-.sideContent>div> p:first-child{
+.UpperContent>div> p:first-child{
    font-size: 1.1rem;
    font-weight: 700;
 }
 
-.sideContent p:last-child{
+.UpperContent p:last-child{
    font-size: 1rem;
    font-weight: 500;
    color: #8A8A8A;
 }
 
-.sideContent>div>hr{
+.UpperContent>div>hr{
    color: #8A8A8A;
    width: 300px;
    size :10px;
 }
+
+.lowerContent .userInfo{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+#pic1{  
+   background:  var(--avatar2) center center /cover no-repeat;
+}
+
+#pic2{
+   background: var(--avatar1) center center /cover no-repeat;  
+}
+
+#pic3{
+   background: var(--avatar3) center center /cover no-repeat;
+}
+
+#pic4{
+   background: var(--avatar4) center center /cover no-repeat;
+}
+
+.userInfo p:nth-child(2){
+   color: #8A8A8A;
+}
+
 
 
 
