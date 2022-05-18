@@ -10,9 +10,6 @@ p,html,body,h1{
    box-sizing: border-box;
 }
 
-
-
-
 .container{
    background-color: #E2E8F0;
    height: 100vh;
@@ -30,16 +27,20 @@ p,html,body,h1{
    box-shadow: 0 8px 8px -4px rgb(0 0 0 / 0.2);
    display: grid;
    grid-template-rows: 1fr 1fr;
-   
-}
-
-.upperHeader{  
-   display: grid;
    padding: 30px 60px;
-   grid-template-columns: 3fr 1fr;
+   gap: 20px;
 }
 
-.upperHeader>div{
+.upperHeader,.lowerHeader{  
+   display: flex;
+   justify-content: space-between;
+}
+
+.upperHeader div:first-child{
+   flex: 1;
+}
+
+.upperHeader>div , .lowerHeader>div{
    display: flex;
    align-items: center;
    gap: 40px;
@@ -66,19 +67,6 @@ p,html,body,h1{
    font-weight: 700;
 }
 
-
-.lowerHeader{
-   display: flex;
-   justify-content: space-between;
-   padding: 0px 60px 30px 60px;
-}
-
-.lowerHeader>div{
-   display: flex;
-   align-items: center;
-   gap: 40px;
-}
-
 .lowerHeader button{
    padding: 10px 30px;
    border-radius: 25px;
@@ -90,17 +78,12 @@ p,html,body,h1{
 
 }
 
-
-
 #profilePicture{
    border-radius: 32.5px;
    background: url(profilePicture.jpg) center center /cover no-repeat;
    width: 75px;
    height: 75px;
 }
-
-
-
 
 .sideBar{
    grid-area: sideBar;
@@ -110,7 +93,6 @@ p,html,body,h1{
    padding: 30px;
    font-size: 1.4rem;
    font-weight: 700;
-
    display: flex;
    flex-direction: column;
    gap: 40px;
@@ -123,7 +105,6 @@ p,html,body,h1{
 .sideBarTitle >div{
    gap: 10px;
 }
-
 
 .options{
    display: flex;
@@ -142,8 +123,6 @@ p,html,body,h1{
    align-items: center;
    gap: 20px;
 }
-
-
 
 .content{
    grid-area: content;
