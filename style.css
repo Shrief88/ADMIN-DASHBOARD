@@ -14,15 +14,22 @@ p,html,body,h1{
    --avatar3:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
    --avatar4:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa20698931623.5ee79b6a8ec2b.jpg);
 
-   --sideBarColor : #1992D4;
+   --sideBarColor : #4700D8;
    --containerColor : #E2E8F0;
    --textColor : #8A8A8A;
+   --cardBoarder:#F900BF;
 }
 
 .smallProfilePicture{
    border-radius: 25px;
    width: 50px;
    height: 50px;
+}
+
+.headerContentText{
+   padding-bottom: 10px;
+   font-size: 1.5rem;
+   font-weight: 700;
 }
 
 .container{
@@ -91,7 +98,7 @@ p,html,body,h1{
 
 #profilePicture{
    border-radius: 32.5px;
-   background: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/06fbe298931623.5ee79b6a90221.jpg) center center /cover no-repeat;
+   background: var(--avatar1) center center /cover no-repeat;
    width: 75px;
    height: 75px;
 }
@@ -137,8 +144,6 @@ p,html,body,h1{
    gap: 20px;
 }
 
-
-
 .content{
    display: grid;
    grid-template-columns: 2.5fr 1fr
@@ -151,12 +156,6 @@ p,html,body,h1{
    display: flex;
    flex-direction: column;
    gap: 50px;
-}
-
-.UpperContent>p,.lowerContent>p,.mainContent>p{
-   padding-bottom: 10px;
-   font-size: 1.5rem;
-   font-weight: 700;
 }
 
 .UpperContent>div , .lowerContent>div{
@@ -227,10 +226,11 @@ p,html,body,h1{
 .card{
    background-color: white;
    padding: 30px 30px 10px 30px ;
-   border-radius: 20px;
+   border-radius: 10px;
    display: grid;
    grid-template-rows: 1fr 0.5fr;
    height: 170px;
+   border-left: 10px solid var(--cardBoarder);
 }   
 
 .card p:nth-child(1){
