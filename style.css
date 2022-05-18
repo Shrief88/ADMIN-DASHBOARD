@@ -13,6 +13,10 @@ p,html,body,h1{
    --avatar2:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/8394f798931623.5ee79b6a909ea.jpg);
    --avatar3:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/2e80bb98931623.5ee79b6a8f342.jpg);
    --avatar4:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa20698931623.5ee79b6a8ec2b.jpg);
+
+   --sideBarColor : #1992D4;
+   --containerColor : #E2E8F0;
+   --textColor : #8A8A8A;
 }
 
 .smallProfilePicture{
@@ -22,7 +26,7 @@ p,html,body,h1{
 }
 
 .container{
-   background-color: #E2E8F0;
+   background-color: var(--containerColor);
    display: grid;
    grid-template-columns: 0.7fr 3fr;
    grid-template-rows: 0.7fr 3fr;
@@ -30,6 +34,8 @@ p,html,body,h1{
    "sideBar header "
    "sideBar content";
 }
+
+/*--------------------------------------Header-------------------------- */
 
 .header{
    grid-area: header; 
@@ -59,7 +65,7 @@ p,html,body,h1{
 .upperHeader input{
    border-radius: 15px;
    height: 40px;
-   background-color: #E2E8F0;
+   background-color: var(--containerColor);
    border: 1px solid #ffffff;
    width:75%;
    min-width: 250px;
@@ -78,11 +84,9 @@ p,html,body,h1{
    padding: 10px 30px;
    border-radius: 25px;
    font-size: 1.2rem;
-   background-color: #1992D4;
+   background-color: var(--sideBarColor);
    color: white;
    border: 1px solid #ffffff;
-
-
 }
 
 #profilePicture{
@@ -92,9 +96,11 @@ p,html,body,h1{
    height: 75px;
 }
 
+/*--------------------------------------SideBar-------------------------- */
+
 .sideBar{
    grid-area: sideBar;
-   background-color: #1992D4;
+   background-color: var(--sideBarColor);
    color: white;
    fill : white;
    padding: 30px;
@@ -131,23 +137,23 @@ p,html,body,h1{
    gap: 20px;
 }
 
+
+
 .content{
    display: grid;
    grid-template-columns: 2.5fr 1fr
 }
 
-
+/*--------------------------------------sideContent-------------------------- */
 
 .sideContent{
-   padding-top: 40px;
-   padding-right: 40px;
-   padding-bottom: 40px;
+   padding: 40px 40px 40px 0px;
    display: flex;
    flex-direction: column;
    gap: 50px;
 }
 
-.UpperContent>p,.lowerContent>p{
+.UpperContent>p,.lowerContent>p,.mainContent>p{
    padding-bottom: 10px;
    font-size: 1.5rem;
    font-weight: 700;
@@ -170,11 +176,11 @@ p,html,body,h1{
 .UpperContent p:last-child{
    font-size: 1rem;
    font-weight: 500;
-   color: #8A8A8A;
+   color: var(--textColor);
 }
 
 .UpperContent>div>hr{
-   color: #8A8A8A;
+   color: var(--textColor);
    width: 300px;
    size :10px;
 }
@@ -202,9 +208,49 @@ p,html,body,h1{
 }
 
 .userInfo p:nth-child(2){
-   color: #8A8A8A;
+   color: var(--textColor);
 }
 
+/*--------------------------------------MainContent-------------------------- */
+
+
+.mainContent{
+   padding: 40px;
+}
+
+.mainContent>div{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   gap: 50px;
+}
+
+.card{
+   background-color: white;
+   padding: 30px 30px 10px 30px ;
+   border-radius: 20px;
+   display: grid;
+   grid-template-rows: 1fr 0.5fr;
+   height: 170px;
+}   
+
+.card p:nth-child(1){
+   font-size: 1.2rem;
+   font-weight: 700;
+   padding-bottom: 5px;
+}
+
+.card p:nth-child(2){
+   font-size: 1rem;
+   font-weight: 500;
+   color: var(--textColor);
+}
+
+.card .icons{
+   display: flex;
+   gap: 10px;
+   justify-self: end;
+   align-items: center;
+}
 
 
 
