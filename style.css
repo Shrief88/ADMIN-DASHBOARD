@@ -107,6 +107,7 @@ body{
    background: var(--avatar1) center center /cover no-repeat;
    width: 75px;
    height: 75px;
+   flex-shrink: 0;
 }
 
 /*--------------------------------------SideBar-------------------------- */
